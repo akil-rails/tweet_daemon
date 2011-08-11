@@ -6,6 +6,9 @@
 
 source :gemcutter
 
+#gem 'ruby-oci8'
+gem 'dbi'
+
 # daemon-kit
 gem 'daemon-kit'
 gem 'twitter'

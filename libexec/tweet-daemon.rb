@@ -24,8 +24,15 @@ end
 
 # Sample loop to show process
 loop do
+  Circlog::opid = DaemonKit.arguments.options[:opid].to_i if Circlog::opid < DaemonKit.arguments.options[:opid].to_i
+  
   DaemonKit.logger.info "I'm running with Opid #{Circlog::opid}"
-  DaemonKit.logger.info Twitter.home_timeline.first.text
+  DaemonKit.logger.info Twitter.home_timeline.first.text  
   sleep 10
-  Circlog::opid = Circlog::opid + 1
+  feeds = Circlog::circlog_tweet_feed(Circlog::opid)
+  feeds.each do |feed|
+    Twitter.update(feed)
+  end
+
+  Circlog::opid += feeds.length  
 end
