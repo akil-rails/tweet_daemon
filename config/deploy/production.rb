@@ -3,4 +3,4 @@
 set :daemon_env, 'production'
 
 set :domain, '74.86.131.195'
-server domain
+server domain, :app

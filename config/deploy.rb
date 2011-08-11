@@ -11,11 +11,12 @@ set :application, "tweet_daemon"
 
 # Deployment
 set :deploy_to, "/disk1/#{application}"
-set :user, 'akil_rails'
+set :user, 'rails'
 
 # Get repo configuration
 set :repository, "git@github.com:yourname/#{application}.git"
 set :scm, "git"
+set :scm_username, 'akil_rails'
 set :branch, "master"
 set :deploy_via, :remote_cache
 set :git_enable_submodules, 1
