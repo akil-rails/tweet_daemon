@@ -1,0 +1,29 @@
+# Logfile created on 2011-08-11 17:18:29 +0530 by logger.rb/25413
+2011-08-11 17:18:29.444500 tweet(9159) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2011-08-11 17:18:29.444643 tweet(9159) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-08-11 17:18:29.444752 tweet(9159) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-08-11 17:18:29.444845 tweet(9159) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-08-11 17:18:29.444941 tweet(9159) [INFO] [daemon-kit]: Setting up trap for INT
+2011-08-11 17:18:29.445031 tweet(9159) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-08-11 17:18:29.445648 tweet(9159) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running tweet
+2011-08-11 17:18:29.453368 tweet(9159) [INFO] tweet-daemon.rb:22: opac_dev
+2011-08-11 17:18:29.453497 tweet(9159) [INFO] tweet-daemon.rb:27: I'm running with Opid 0
+2011-08-11 17:18:31.376615 tweet(9159) [INFO] tweet-daemon.rb:28: Sympathy for the Underdog (2001): classic Japanese old-school Yakuza movie... Watch it if you like #SONATINE #Kitano
+2011-08-11 17:18:37.741320 tweet(9159) [INFO] [daemon-kit]: Running signal traps for INT
+2011-08-11 17:18:37.741490 tweet(9159) [INFO] [daemon-kit]: Running shutdown hooks
+2011-08-11 17:18:37.741589 tweet(9159) [WARN] [daemon-kit]: Shutting down tweet
+2011-08-11 17:18:45.969713 tweet(9169) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2011-08-11 17:18:45.969905 tweet(9169) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-08-11 17:18:45.970071 tweet(9169) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-08-11 17:18:45.970180 tweet(9169) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-08-11 17:18:45.970465 tweet(9169) [INFO] [daemon-kit]: Setting up trap for INT
+2011-08-11 17:18:45.970564 tweet(9169) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-08-11 17:18:45.971435 tweet(9169) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running tweet
+2011-08-11 17:18:45.976468 tweet(9169) [INFO] tweet-daemon.rb:22: opac_dev
+2011-08-11 17:18:45.988145 tweet(9169) [INFO] tweet-daemon.rb:27: I'm running with Opid 0
+2011-08-11 17:18:49.642968 tweet(9169) [INFO] tweet-daemon.rb:28: Sympathy for the Underdog (2001): classic Japanese old-school Yakuza movie... Watch it if you like #SONATINE #Kitano
+2011-08-11 17:18:59.643673 tweet(9169) [INFO] tweet-daemon.rb:27: I'm running with Opid 1
+2011-08-11 17:19:01.126417 tweet(9169) [INFO] tweet-daemon.rb:28: Sympathy for the Underdog (2001): classic Japanese old-school Yakuza movie... Watch it if you like #SONATINE #Kitano
+2011-08-11 17:19:01.348050 tweet(9169) [INFO] [daemon-kit]: Running signal traps for INT
+2011-08-11 17:19:01.348217 tweet(9169) [INFO] [daemon-kit]: Running shutdown hooks
+2011-08-11 17:19:01.348325 tweet(9169) [WARN] [daemon-kit]: Shutting down tweet

@@ -1,0 +1,7 @@
+development:
+  adapter: mysql
+  database: opac_dev
+  pool: 3306
+  user : root
+  password : Iflex7585
+  timeout: 5000
