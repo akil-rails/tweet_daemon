@@ -15,7 +15,7 @@ set :user, 'rails'
 
 # Get repo configuration
 set :scm, "git"
-set :scm_username, 'akil_rails'
+set :scm_username, 'akil-rails'
 set :repository, "git@github.com:#{scm_username}/#{application}.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
