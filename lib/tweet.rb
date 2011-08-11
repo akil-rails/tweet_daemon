@@ -26,7 +26,7 @@ class Circlog
       From Circlog2 A, Branches B, Titles C 
       where a.branchid = b.id
       and c.id = a.titleid
-      and opid >= " + current_opid.to_s + 
+      and opid > " + current_opid.to_s + 
       " and operation = 'D' 
       order by opid")
       rs.execute
@@ -35,7 +35,7 @@ class Circlog
       feed = Array.new
       while rsRow = rs.fetch do
          title = rsRow[4][0, max_title_size].strip.gsub(/\#/, '')
-         issued_at = rsRow[2][0, max_title_size].strip.gsub(/\s/, '')
+         issued_at = rsRow[2][4, max_title_size].strip.gsub(/\s/, '')
          feed << camelize(title) + ' #issued at ' + '#' + camelize(issued_at)
       end
 
