@@ -22,26 +22,27 @@ class Circlog
     dbi_connection_url = 'DBI:OCI8:' + dbconfig[:database]
 
     dbh = DBI.connect(dbi_connection_url, username, password)
-      rs = dbh.prepare('select opid, operation, branchname, a.titleid, title, isbn_13 
-      From Circlog2 A, Branch B, Titles C 
-      where a.branchid = b.branchid
-      and c.titleid = a.titleid
-      and opid >= ' + current_opid.to_s + 
-      'order by opid')
+      rs = dbh.prepare("select opid, operation, b.name, a.titleid, c.title, isbn 
+      From Circlog2 A, Branches B, Titles C 
+      where a.branchid = b.id
+      and c.id = a.titleid
+      and opid >= " + current_opid.to_s + 
+      " and operation = 'D' 
+      order by opid")
       rs.execute
       
       max_title_size = 30
       feed = Array.new
       while rsRow = rs.fetch do
-         title = rsRow[4][0, max_title_size].strip.gsub(/[\s,#]/, '')
+         title = rsRow[4][0, max_title_size].strip.gsub(/\#/, '')
          issued_at = rsRow[2][0, max_title_size].strip.gsub(/\s/, '')
-         feed << '#' + camelize(title) + ' #Issued At ' + '#' + camelize(issued_at)
+         feed << camelize(title) + ' #issued at ' + '#' + camelize(issued_at)
       end
 
       rs.finish
     dbh.disconnect
 
-    return feed
+    return feed.uniq
   end
 
 end
