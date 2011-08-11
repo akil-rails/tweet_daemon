@@ -27,3 +27,14 @@
 2011-08-11 17:19:01.348050 tweet(9169) [INFO] [daemon-kit]: Running signal traps for INT
 2011-08-11 17:19:01.348217 tweet(9169) [INFO] [daemon-kit]: Running shutdown hooks
 2011-08-11 17:19:01.348325 tweet(9169) [WARN] [daemon-kit]: Shutting down tweet
+2011-08-11 17:27:54.289816 tweet(9477) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2011-08-11 17:27:54.290008 tweet(9477) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-08-11 17:27:54.290169 tweet(9477) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-08-11 17:27:54.290269 tweet(9477) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-08-11 17:27:54.290549 tweet(9477) [INFO] [daemon-kit]: Setting up trap for INT
+2011-08-11 17:27:54.290676 tweet(9477) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-08-11 17:27:54.291349 tweet(9477) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running tweet
+2011-08-11 17:27:54.296605 tweet(9477) [INFO] tweet-daemon.rb:22: opac_dev
+2011-08-11 17:27:54.302319 tweet(9477) [INFO] tweet-daemon.rb:27: I'm running with Opid 0
+2011-08-11 17:27:56.840150 tweet(9477) [INFO] [daemon-kit]: Running shutdown hooks
+2011-08-11 17:27:56.840287 tweet(9477) [WARN] [daemon-kit]: Shutting down tweet
