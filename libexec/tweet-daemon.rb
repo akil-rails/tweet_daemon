@@ -18,21 +18,24 @@ DaemonKit::Application.running! do |config|
   	config.oauth_token_secret = twitterconfig[:oauth_token_secret]
   end
 
-  dbconfig = DaemonKit::Config.load('database')
-  DaemonKit.logger.info dbconfig[:database]  
+  Circlog::opid = DaemonKit.arguments.options[:opid].to_i
 end
 
 # Sample loop to show process
 loop do
-  Circlog::opid = DaemonKit.arguments.options[:opid].to_i if Circlog::opid < DaemonKit.arguments.options[:opid].to_i
+  begin
+    sleep 35 + rand(4) * 10 
   
-  DaemonKit.logger.info "I'm running with Opid #{Circlog::opid}"
-  DaemonKit.logger.info Twitter.home_timeline.first.text  
-  sleep 10
-  feeds = Circlog::circlog_tweet_feed(Circlog::opid)
-  feeds.each do |feed|
-    Twitter.update(feed)
+    DaemonKit.logger.info "I'm running with Opid #{Circlog::opid}"
+    DaemonKit.logger.info Twitter.home_timeline.first.text  
+    
+    feeds = Circlog::circlog_tweet_feed(Circlog::opid)
+    feeds.each do |feed|
+      Twitter.update(feed)
+    end
+    
+    Circlog::opid += feeds.length  
+  rescue
+    DaemonKit.logger.error $!
   end
-
-  Circlog::opid += feeds.length  
 end
