@@ -28,7 +28,7 @@ class Circlog
       and c.id = a.titleid
       and opid >= " + current_opid.to_s + 
       " and operation = 'D' 
-      order by opid")
+      order by opid desc")
       rs.execute
       
       max_title_size = 30

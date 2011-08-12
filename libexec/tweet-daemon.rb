@@ -30,9 +30,7 @@ loop do
     DaemonKit.logger.info Twitter.home_timeline.first.text  
     
     feeds = Circlog::circlog_tweet_feed(Circlog::opid)
-    feeds.each do |feed|
-      Twitter.update(feed)
-    end
+    Twitter.update(feed.first)
     
     Circlog::opid += feeds.length  
   rescue
